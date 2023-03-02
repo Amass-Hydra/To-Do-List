@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body style= background-color: #b0c4de;> </style>
+    <h1 style="text-align:center; text-decoration-color: rgb(255, 240, 240);">MY TO DO LIST</h1>
+    <div id="container">
+      <form id="todo-form">
+        <input type="text" id="todo-input">
+        <button id="todo-button">Add</button>
+      </form>
+      <div id="todo-list"></div>
+    </div>
+    <script src="To-do.js"></script>
+    <script>
+      // Initialize todos array
+      let todos = [];
+
+      function displayTodos() {
+        let todoList = document.getElementById("todo-list");
+        todoList.innerHTML = "";
+        for (let i = 0; i < todos.length; i++) {
+          let todoItem = document.createElement("div");
+          todoItem.classList.add("todo-item");
+          todoItem.innerText = todos[i];
+          todoList.appendChild(todoItem);
+        }
+      }
+
+      let addButton = document.getElementById("todo-button");
+     
