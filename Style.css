@@ -32,7 +32,7 @@ body {
     font-size: 16px;
     padding: 10px;
     margin-left: 10px;
-    cursor: pointer;
+    cursor: progress;
   }
   
   #todo-list {
